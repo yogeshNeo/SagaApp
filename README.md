@@ -1,4 +1,4 @@
-# AI Reactive Application
+# Saga App Reactive Application
 Spring Boot version : 3.1.3 <br />
 Spring dependecy management : 1.1.3 <br />
 Java : 17 <br />
