@@ -1,0 +1,35 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+  main:
+    web-application-type: reactive
+    allow-bean-definition-overriding: true
+  application:
+    name: tech
+  r2dbc:
+    url: r2dbc:pool:mysql://localhost:3306
+    host: localhost
+    username: root
+    password: 12345
+    port: 3306
+    database:
+      app: tech
+    initialization-mode: always
+  jpa:
+    show-sql: false
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+  data:
+    mongodb:
+      reactive:
+        database: tech
+        uri: mongodb://localhost:27017
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+project:
+  image: /src/main/resources/images/

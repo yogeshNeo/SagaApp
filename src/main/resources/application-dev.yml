@@ -1,0 +1,43 @@
+spring:
+  config:
+    activate:
+      on-profile: dev
+  main:
+    web-application-type: reactive
+    allow-bean-definition-overriding: true
+    autoconfigure:
+      exclude: org.springframework.boot.autoconfigure.sql.init.R2dbcInitializationConfiguration,org.springframework.boot.autoconfigure.mongo.MongoReactiveAutoConfiguration,org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration
+  application:
+    name: AI
+
+  r2dbc:
+    url: r2dbc:pool:mysql://localhost:3306
+    username: root
+    password: 12345
+    host: localhost
+    port: 3306
+    database:
+      app: techDev
+    initialization-mode: always
+
+  jpa:
+    show-sql: false
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+
+  data:
+    r2dbc:
+      repositories:
+        enabled: true
+    mongodb:
+      reactive:
+        database: techDev
+        uri: mongodb://localhost:27017
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+project:
+  image: /src/main/resources/images/
