@@ -1,4 +1,4 @@
-package com.ai.configuration;
+package com.saga.configuration;
 
 import io.r2dbc.spi.ConnectionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,7 @@ import org.springframework.r2dbc.connection.init.ResourceDatabasePopulator;
 import org.springframework.transaction.ReactiveTransactionManager;
 
 @Configuration
-@EnableR2dbcRepositories(basePackages = "com.ai.repository")
+@EnableR2dbcRepositories(basePackages = "com.saga.repository")
 public class MySqlConfiguration {
     @Autowired
     private CustomR2bcProperties customR2bcProperties;

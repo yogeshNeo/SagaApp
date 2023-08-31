@@ -1,4 +1,4 @@
-package com.ai.configuration;
+package com.saga.configuration;
 
 import io.r2dbc.spi.ConnectionFactoryOptions;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package com.ai.configuration;
+package com.saga.configuration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.config.CorsRegistry;

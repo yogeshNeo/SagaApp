@@ -1,4 +1,4 @@
-package com.ai.configuration;
+package com.saga.configuration;
 
 import com.mongodb.*;
 import com.mongodb.reactivestreams.client.MongoClient;
@@ -14,7 +14,7 @@ import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRep
 
 @Configuration
 @EnableReactiveMongoRepositories(
-        basePackages = {"com.ai.repository.mongo"},
+        basePackages = {"com.saga.repository.mongo"},
         reactiveMongoTemplateRef = "reactiveMongoTemplate"
 )
 public class ReactiveMongoConfig extends AbstractReactiveMongoConfiguration {

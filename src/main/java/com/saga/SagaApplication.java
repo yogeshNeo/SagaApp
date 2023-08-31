@@ -1,4 +1,4 @@
-package com.ai;
+package com.saga;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
@@ -13,15 +13,15 @@ import java.net.UnknownHostException;
 
 @Slf4j
 @SpringBootApplication(exclude = {MongoAutoConfiguration.class, MongoReactiveAutoConfiguration.class, MongoReactiveDataAutoConfiguration.class})
-public class AIApplication {
+public class SagaApplication {
     private static Environment env;
 
-    public AIApplication(Environment env) {
-        AIApplication.env = env;
+    public SagaApplication(Environment env) {
+        SagaApplication.env = env;
     }
 
     public static void main(String[] args) throws UnknownHostException {
-        SpringApplication.run(AIApplication.class, args);
+        SpringApplication.run(SagaApplication.class, args);
         String profile = env.getActiveProfiles()[0];
         String hostname = InetAddress.getLocalHost().getHostAddress();
         String info = env.getProperty("spring.application.name") + " App running on http://" + hostname + ":" + env.getProperty("server.port") + " for " + profile + " profile";

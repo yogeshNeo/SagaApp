@@ -1,7 +1,7 @@
-package com.ai.controller;
+package com.saga.controller;
 
-import com.ai.domain.User;
-import com.ai.repository.mongo.UserRepository;
+import com.saga.domain.User;
+import com.saga.repository.mongo.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -1,6 +1,6 @@
-package com.ai.repository;
+package com.saga.repository;
 
-import com.ai.domain.Person;
+import com.saga.domain.Person;
 import org.springframework.data.r2dbc.repository.R2dbcRepository;
 import org.springframework.stereotype.Repository;
 

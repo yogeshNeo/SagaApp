@@ -1,4 +1,4 @@
-package com.ai.configuration;
+package com.saga.configuration;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
